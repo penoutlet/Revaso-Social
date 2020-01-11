@@ -23,6 +23,7 @@ public class AuthorService {
             return authorRepository.save(author);
         } catch (Exception e) {
             throw new UserExistsException("That username is already taken");
+//            e.printStackTrace();
         }
     }
 
