@@ -7,9 +7,12 @@ spring:
 
 #    ${JAWSDB_URL}
   jpa:
+    hibernate:
+      ddl-auto=update: update
     database-platform: org.hibernate.dialect.MySQL57Dialect
 #  h2:
 #    console:
 #      enabled: true
 #      path: /h2-console
 
+o
