@@ -14,7 +14,8 @@ public class AuthorSearchService {
         this.authorRepository = authorRepository;
     }
 
-    public Author findByUsernameLike(String username) {
+    public List<Author> findByUsernameStartsWith(String username) {
+        System.out.println("Username ignore case");
         return authorRepository.findAuthorByUsernameStartsWith(username);
     }
 
@@ -24,5 +25,10 @@ public class AuthorSearchService {
 
     public List<Author> findByEmailStartsWith(String fName) {
         return authorRepository.findAuthorByEmailStartsWith(fName);
+    }
+
+    public List<Author> findByUsernameIgnoreCase(String username) {
+
+        return authorRepository.findAuthorByUsernameIgnoreCase(username);
     }
 }

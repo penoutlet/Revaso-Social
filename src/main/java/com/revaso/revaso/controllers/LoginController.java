@@ -36,7 +36,7 @@ public class LoginController {
     }
 
     public Author returnLoggedInUser(String userName) {
-        Author p = profileRepository.findAuthorByUsernameIgnoreCase(userName);
+        Author p = profileRepository.findAuthorByUsername(userName);
         System.out.println(p);
         return p;
     }

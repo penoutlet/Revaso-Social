@@ -2,6 +2,7 @@ package com.revaso.revaso.controllers;
 
 import com.revaso.revaso.models.Author;
 import com.revaso.revaso.services.AuthorSearchService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -51,9 +52,9 @@ public class SearchAuthorController {
      * @return     Returning profile of the specific user.
      */
 	@GetMapping("/selectProfileByUsername/{username}.do")
-	public ResponseEntity<Author> selectProfileByUsername(@PathVariable("username") String username){
-		Author author = authorSearchService.findByUsernameLike(username);
-		return ResponseEntity.ok().body(author);
+	public ResponseEntity<List<Author>> selectProfileByUsernameStartsWith(@PathVariable("username") String username){
+		List<Author> authors = (List<Author>) authorSearchService.findByUsernameStartsWith(username);
+		return new ResponseEntity<>(authors, HttpStatus.ACCEPTED);
 	}
 
 

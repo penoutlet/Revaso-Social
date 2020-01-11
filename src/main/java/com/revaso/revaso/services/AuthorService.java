@@ -38,7 +38,7 @@ public class AuthorService {
 
 
     public Author findByUsername(String username) {
-        return profileRepository.findAuthorByUsernameIgnoreCase(username);
+        return profileRepository.findAuthorByUsername(username);
     }
 
 

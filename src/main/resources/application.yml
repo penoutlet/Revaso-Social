@@ -3,11 +3,13 @@ server:
 
 spring:
   datasource:
-    url: ${JAWSDB_URL}
+    url: jdbc:mysql://ewgf13uiynnisl88:lwc45bwqeae13lg3@y06qcehxdtkegbeb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/hjyxht1xlcuo0nc9
+
+#    ${JAWSDB_URL}
   jpa:
     database-platform: org.hibernate.dialect.MySQL57Dialect
-#  h2:
-#    console:
-#      enabled: true
-#      path: /h2-console
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
