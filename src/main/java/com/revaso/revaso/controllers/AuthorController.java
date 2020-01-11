@@ -31,7 +31,6 @@ public class AuthorController {
 		this.mapValidationErrorService = mapValidationErrorService;
 		this.authorService = authorService;
 	}
-
 	//	@Autowired
 //	private Encrypter encrypter;
 	

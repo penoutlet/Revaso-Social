@@ -15,7 +15,7 @@ import java.util.List;
  *
  */
 @Entity
-@Table(name = "PROFILE")
+@Table(name = "AUTHOR")
 public class Author {
 	
 	@Id // primary key

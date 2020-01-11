@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class LoginController {
 
     @Autowired
-    private AuthorRepository profileRepository;
+    private AuthorRepository authorRepository;
 
 //    @Autowired
 //    Encrypter encrypter; could autowire bcrypt...
@@ -36,7 +36,7 @@ public class LoginController {
     }
 
     public Author returnLoggedInUser(String userName) {
-        Author p = profileRepository.findAuthorByUsername(userName);
+        Author p = authorRepository.findAuthorByUsername(userName);
         System.out.println(p);
         return p;
     }

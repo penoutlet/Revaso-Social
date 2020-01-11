@@ -76,8 +76,6 @@ public class PostController {
 	@PutMapping(value="/likePost/{id}")
 	public Post likePost(@PathVariable Long id) {
 		Post postToLike = postRepository.getPostById(id);
-//		Author author = authorService.findProfileById(authorId);
-//		if(postToLike.getAuthor().getId().equals(authorId)) return new Post();
 		postToLike.setNumLikes(postToLike.getNumLikes()+1);
 		postRepository.save(postToLike);
 		return postToLike;
