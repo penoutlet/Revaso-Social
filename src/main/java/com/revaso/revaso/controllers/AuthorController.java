@@ -25,11 +25,11 @@ import java.util.List;
 public class AuthorController {
 
 	private MapValidationErrorService mapValidationErrorService;
-	private AuthorService profileService;
+	private AuthorService authorService;
 
-	public AuthorController(MapValidationErrorService mapValidationErrorService, AuthorService profileService) {
+	public AuthorController(MapValidationErrorService mapValidationErrorService, AuthorService authorService) {
 		this.mapValidationErrorService = mapValidationErrorService;
-		this.profileService = profileService;
+		this.authorService = authorService;
 	}
 
 	//	@Autowired
@@ -42,7 +42,7 @@ public class AuthorController {
 
 	@GetMapping("/getAllProfiles.do")
 	public ResponseEntity<List<Author>> list(){
-		List<Author>Plist = profileService.findAllProfiles();
+		List<Author>Plist = authorService.findAllAuthors();
 		return ResponseEntity.ok().body(Plist);
 	}
 	
@@ -60,7 +60,7 @@ public class AuthorController {
 			return errors;
 		}
 
-		profileService.addProfile(author);
+		authorService.addAuthor(author);
 		return new ResponseEntity<Author>(author, HttpStatus.CREATED);
 	}
 	 
@@ -73,7 +73,7 @@ public class AuthorController {
 	@GetMapping("/selectProfileByID/{id}.do")
 	public ResponseEntity<Author> selectById(@PathVariable("id") Long id){
 
-		Author author = profileService.findProfileById(id);
+		Author author = authorService.findAuthorById(id);
 		return ResponseEntity.ok().body(author);
 	}
 	

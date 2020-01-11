@@ -69,7 +69,7 @@ public class PostController {
 	@GetMapping(value="/postsByUser/{userId}")
 	public List<Post> getPostsByUserId(@PathVariable("userId") Long userId){
 
-		 Author a = authorService.findProfileById(userId);
+		 Author a = authorService.findAuthorById(userId);
 		return a.getPosts();
 	}
 
@@ -85,7 +85,7 @@ public class PostController {
 	@PostMapping(value="/addPost.do/{authorId}")
 	public ResponseEntity<String> insert(@RequestBody Post post, @PathVariable Long authorId){
 		System.out.println("Post added... " + post.toString());
-		Author a = authorService.findProfileById(authorId);
+		Author a = authorService.findAuthorById(authorId);
 //		a.setPosts(a);
 		post.setAuthor(a);
 		postRepository.save(post);

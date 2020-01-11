@@ -11,34 +11,34 @@ import java.util.List;
 @Service
 public class AuthorService {
 
-    private AuthorRepository profileRepository;
+    private AuthorRepository authorRepository;
     @Autowired
-    public AuthorService(AuthorRepository profileRepository) {
-        this.profileRepository = profileRepository;
+    public AuthorService(AuthorRepository authorRepository) {
+        this.authorRepository = authorRepository;
     }
 
-    public Author addProfile(Author author) {
+    public Author addAuthor(Author author) {
 
         try {
-            return profileRepository.save(author);
+            return authorRepository.save(author);
         } catch (Exception e) {
             throw new UserExistsException("That username is already taken");
         }
     }
 
-    public List<Author> findAllProfiles() {
+    public List<Author> findAllAuthors() {
 
-        return profileRepository.findAll();
+        return authorRepository.findAll();
     }
 
 
-    public Author findProfileById(Long id){
-        return profileRepository.findById(id).get();
+    public Author findAuthorById(Long id){
+        return authorRepository.findById(id).get();
     }
 
 
     public Author findByUsername(String username) {
-        return profileRepository.findAuthorByUsername(username);
+        return authorRepository.findAuthorByUsername(username);
     }
 
 
