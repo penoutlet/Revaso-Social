@@ -3,8 +3,10 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://ewgf13uiynnisl88:lwc45bwqeae13lg3@y06qcehxdtkegbeb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/hjyxht1xlcuo0nc9
-
+#    url: jdbc:mysql://ewgf13uiynnisl88:lwc45bwqeae13lg3@y06qcehxdtkegbeb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/hjyxht1xlcuo0nc9
+    url: jdbc:mysql://sammysql.mysql.database.azure.com/author?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: samrjonesdev@sammysql
+    password: codegud24/7
 #    ${JAWSDB_URL}
   jpa:
     hibernate:
