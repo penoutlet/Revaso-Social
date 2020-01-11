@@ -26,19 +26,19 @@ public class Author {
 	@Column(name = "USERNAME", unique = true, nullable = false)
 	private String username;
 	
-	@Column(name = "USERPASS", nullable = false)
+	@Column(name = "USERPASSWORD", nullable = false)
 	private String userPassword;
 	
-	@Column(name = "FNAME", nullable = false)
+	@Column(name = "FIRST_NAME", nullable = false)
 	private String fName;
 	
-	@Column(name = "LNAME", nullable = false)
+	@Column(name = "LAST_NAME", nullable = false)
 	private String lName;
 	
 	@Column(name = "GENDER", nullable = false)
 	private String gender;
 	
-	@Column(name="profileImage")
+	@Column(name="PROFILE_IMAGE")
 	private String profileImage;
 	
 	@Column(name = "CITY")
