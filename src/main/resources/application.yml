@@ -3,9 +3,10 @@ server:
 
 spring:
   datasource:
-    url: ${AZURE_URL}
-    username: ${AZURE_USER}
-    password: ${AZURE_PW}
+    url: ${JAWSDB_PURPLE_URL}
+#    url: ${AZURE_URL}
+#    username: ${AZURE_USER}
+#    password: ${AZURE_PW}
   jpa:
     hibernate:
       ddl-auto=update: update
