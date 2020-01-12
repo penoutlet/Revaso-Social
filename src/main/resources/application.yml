@@ -3,8 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://d1f3ohxnomvwll8e:hfflwyvevigfuwkx@tviw6wn55xwxejwj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/khw5q6ztuxt4c38z
-#    url: ${JAWSDB_PURPLE_URL}
+    url: ${JAWSDB_PURPLE_URL}
 #    url: ${AZURE_URL}
 #    username: ${AZURE_USER}
 #    password: ${AZURE_PW}
