@@ -1,15 +1,15 @@
 server:
   port: ${PORT:8080}
 
-#spring:
-#  datasource:
-#  url: ${AZURE_URL}
-#  username: ${AZURE_USER}
-#  password: ${AZURE_PW}
-#  jpa:
-#    hibernate:
-#      ddl-auto=update: update
-#    database-platform: org.hibernate.dialect.MySQL57Dialect
+spring:
+  datasource:
+  url: ${AZURE_URL}
+  username: ${AZURE_USER}
+  password: ${AZURE_PW}
+  jpa:
+    hibernate:
+      ddl-auto=update: update
+    database-platform: org.hibernate.dialect.MySQL57Dialect
 ##  profiles:
 ##    active: dev
 ##  h2:
