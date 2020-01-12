@@ -76,14 +76,14 @@ public class AuthorController {
 		return ResponseEntity.ok().body(author);
 	}
 	
-//	@PutMapping("/updateProfile/{id}")
-//	public Profile updateAndReturn(@PathVariable int id, @RequestBody Profile profile) {
-//		System.out.println("Updating profile: " + profile.toString());
-//		Profile newProfile = proDao.update(id, profile);
-//		System.out.println("New profile in controller: " + newProfile.toString());
-//		return newProfile;
-////		return ResponseEntity.ok().body("Profile updated: " + newProfile.toString());
-//	}
+	@PutMapping("/updateProfile/{id}")
+	public Author updateAndReturn(@PathVariable int id, @RequestBody Author author) {
+		System.out.println("Updating profile: " + author.toString());
+		Author newProfile = authorService.addAuthor(author);
+		System.out.println("New profile in controller: " + newProfile.toString());
+		return newProfile;
+//		return ResponseEntity.ok().body("Profile updated: " + newProfile.toString());
+	}
 	
 //	@PutMapping("/resetPassword/{username}")
 //	public HttpStatus resetPassword(@PathVariable String username, @RequestBody Profile profile) {
