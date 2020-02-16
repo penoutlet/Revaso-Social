@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: ${JAWSDB_PURPLE_URL}
+    url: ${JAWSDB_URL}
 #    url: ${AZURE_URL}
 #    username: ${AZURE_USER}
 #    password: ${AZURE_PW}
