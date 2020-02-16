@@ -13,14 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @CrossOrigin
 @Component
-//@SessionAttributes("loggedInUser")
 public class LoginController {
 
     @Autowired
     private AuthorRepository authorRepository;
-
-//    @Autowired
-//    Encrypter encrypter; could autowire bcrypt...
 
     @PostMapping(value = "/login.do")
     public Author login(@RequestBody LoginCredentials creds) {
